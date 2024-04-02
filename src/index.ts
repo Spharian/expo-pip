@@ -4,6 +4,6 @@ import { NativeModulesProxy, EventEmitter, Subscription } from 'expo-modules-cor
 // and on native platforms to ExpoPip.ts
 import ExpoPipModule from './ExpoPipModule';
 
-export function enterPipMode(): string {
+export function enterPipMode() {
   return ExpoPipModule.enterPipMode();
 }
