@@ -5,6 +5,7 @@ import expo.modules.kotlin.modules.ModuleDefinition
 import android.os.Build
 import android.util.Rational
 import android.app.PictureInPictureParams
+import android.content.res.Configuration
 
 class ExpoPipModule() : Module() {
     // Each module class must implement the definition function. The definition consists of components
@@ -18,7 +19,7 @@ class ExpoPipModule() : Module() {
 
         Events("onPictureInPictureModeChange")
 
-        fun pipModeChanged(isInPictureInPictureMode: Boolean) {
+        override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
             this@ExpoPipModule.sendEvent("onPictureInPictureModeChange", isInPictureInPictureMode)
         }
 
