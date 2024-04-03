@@ -93,8 +93,8 @@ android {
 
   namespace "expo.modules.pip"
   defaultConfig {
-    versionCode 17
-    versionName "12.7.2"
+    versionCode 1
+    versionName "0.1.0"
   }
 }
 
