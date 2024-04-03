@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <application>
         <activity
-            android:name=".MainActivity"
+            android:name="VideoActivity"
             android:resizeableActivity="true"
             android:supportsPictureInPicture="true"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|smallestScreenSize|orientation">
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
         </activity>
     </application>
 </manifest>
