@@ -16,6 +16,12 @@ class ExpoPipModule() : Module() {
         // The module will be accessible from `requireNativeModule('ExpoPip')` in JavaScript.
         Name("ExpoPip")
 
+        Events("onPictureInPictureModeChange")
+
+        fun pipModeChanged(isInPictureInPictureMode: Boolean) {
+            this@ExpoPipModule.sendEvent("onPictureInPictureModeChange", isInPictureInPictureMode)
+        }
+
         // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
         Function("enterPipMode") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
