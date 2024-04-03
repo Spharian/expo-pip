@@ -19,10 +19,6 @@ class ExpoPipModule() : Module() {
 
         Events("onPictureInPictureModeChange")
 
-        override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
-            this@ExpoPipModule.sendEvent("onPictureInPictureModeChange", isInPictureInPictureMode)
-        }
-
         // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
         Function("enterPipMode") {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
