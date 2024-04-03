@@ -22,7 +22,7 @@ class ExpoPipModule() : Module() {
                 val params = PictureInPictureParams.Builder()
                     .setAspectRatio(Rational(3, 4))
                     .build()
-                appContext.reactContext?.currentActivity?.enterPictureInPictureMode(params)
+                appContext.currentActivity?.enterPictureInPictureMode(params)
             }
         }
     }
